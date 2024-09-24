@@ -18,27 +18,8 @@
 }
 
 </style>
- <!-- modal -->
-
-    
- <div class="">
-  <!-- The button to open modal -->
-<label for="my_modal_6" class="btn">open modal</label>
-
-<!-- Put this part before </body> tag -->
-<input type="checkbox" id="my_modal_6" class="modal-toggle" />
-<div class="modal " role="dialog">
-<div class="bg-white p-6 w-96 rounded-xl flex flex-col items-center">
-<h3 class="text-3xl font-bold">Congrates!</h3>
-<img src="./assets/coin.png" alt="" class="w-[30px]">
-<p class="py-4">You have Donated for Humankind</p>
-<h1 class="text-2xl font-bold">Successfully!</h1>
-<div class="modal-action flex justify-center">
-  <label for="my_modal_6" class="btn">Close Confirmation!</label>
-</div>
-</div>
-</div>
- </div>
+ 
+ 
 
 <body class="lexend-font" >
     <nav class="lg:px-32 sticky top-0">
@@ -56,14 +37,14 @@
             </div>
             <div class="navbar-end flex">
               <img src="./assets/coin.png" alt="coin image">
-              <h1 id="total-coin" class="mx-4 text-xl font-bold">5000</h1>
+              <h1  class="mx-4 text-xl font-bold" id="total-balance">5000</h1>
               <h1 class="text-xl font-bold">BDT</h1>
             </div>
           </div>
           <!-- button  -->
            <div class="flex justify-center my-16">
             <button class="px-4 lg:px-8 py-2 lg:py-4 bg-btn-primary rounded-lg mr-6 text-[20px] font-bold " id="btn-donate">Donate</button>
-            <button class="px-4 lg:px-8 py-2 lg:py-4 bg-btn-secondary rounded-lg text-[20px] font-bold" id="btn-history">History</button>
+            <button class="px-4 lg:px-8 py-2 lg:py-4 bg-btn-secondary rounded-lg text-[20px] font-bold payment-btn" id="btn-history">History</button>
            </div>
            <div>
             
@@ -93,7 +74,7 @@
                       <!-- form -->
                        <form action="" class="grid my-6 ">
                         <input type="text" placeholder="Write Donate Amount" id="input-noakhali" class="py-4 pl-4 rounded-xl border-2 border-cd-section-bg my-6">
-                        <button type="button" class="py-4 bg-btn-primary text-xl font-bold rounded-xl" id="btn-noakhali">Donate Now</button>
+                        <button type="button" class="py-4 bg-btn-primary text-xl font-bold rounded-xl payment-btn" id="btn-noakhali">Donate Now</button>
                        </form>
                   </div>
             </div>
@@ -108,7 +89,7 @@
                  <div class="w-fit px-6 py-4 bg-btn-secondary flex rounded-xl">
                     <img src="./assets/coin.png" alt="coin">
                     <p class="mx-4"></p>
-                    <p class="text-xl">BDT</p>
+                    <p class="text-xl " id="feni-Final">BDT</p>
                  </div>
                  <!-- card headings -->
                   <h1 class="text-[32px] font-bold my-6">Donate for Flood Relief in Feni,Bangladesh</h1>
@@ -116,8 +97,8 @@
 
                   <!-- form -->
                    <form action="" class="grid my-6 ">
-                    <input type="text" placeholder="Write Donate Amount" id="" class="py-4 pl-4 rounded-xl border-2 border-cd-section-bg my-6">
-                    <button type="submit" class="py-4 bg-btn-primary text-xl font-bold rounded-xl">Donate Now</button>
+                    <input type="text" placeholder="Write Donate Amount"  class="py-4 pl-4 rounded-xl border-2 border-cd-section-bg my-6" id="input-feni">
+                    <button type="submit" class="py-4 bg-btn-primary text-xl font-bold rounded-xl payment-btn" id="btn-feni">Donate Now</button>
                    </form>
               </div>
         </div>
@@ -132,7 +113,7 @@
                 <!-- card amount -->
                  <div class="w-fit px-6 py-4 bg-btn-secondary flex rounded-xl">
                     <img src="./assets/coin.png" alt="coin">
-                    <p class="mx-4"></p>
+                    <p class="mx-4" id="quota-Final"></p>
                     <p class="text-xl">BDT</p>
                  </div>
                  <!-- card headings -->
@@ -140,8 +121,8 @@
                   <p class="my-6 text-xl"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                   <!-- form -->
                    <form action="" class="grid my-6 ">
-                    <input type="text" placeholder="Write Donate Amount" id="" class="py-4 pl-4 rounded-xl border-2 border-cd-section-bg my-6">
-                    <button type="submit" class="py-4 bg-btn-primary text-xl font-bold rounded-xl">Donate Now</button>
+                    <input type="text" placeholder="Write Donate Amount" id="input-quota" class="py-4 pl-4 rounded-xl border-2 border-cd-section-bg my-6">
+                    <button type="submit" class="py-4 bg-btn-primary text-xl font-bold rounded-xl" id="btn-quota">Donate Now</button>
                    </form>
               </div>
         </div>
@@ -154,10 +135,33 @@
      <!-- history section started -->
 
      <section >
-      <div class="hidden w-9/12 mx-auto" id="comment-section"><h1>Hello History!</h1></div>
+      <div class="hidden w-9/12 mx-auto" id="comment-section"></div>
       
     
      </section>
+
+     <!-- modal div -->
+
+     <!-- modal -->
+
+ <div class="" id="modal-div">
+  <!-- The button to open modal -->
+<!-- <label for="my_modal_6" ></label> -->
+
+
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal " role="dialog">
+<div class="bg-white p-6 w-96 rounded-xl flex flex-col items-center">
+<h3 class="text-3xl font-bold">Congrates!</h3>
+<img src="./assets/coin.png" alt="" class="w-[30px]">
+<p class="py-4">You have Donated for Humankind</p>
+<h1 class="text-2xl font-bold">Successfully!</h1>
+<div class="modal-action flex justify-center">
+  <label for="my_modal_6" class="btn">Close Confirmation!</label>
+</div>
+</div>
+</div>
+ </div> 
      
 
      <!-- Script Section -->

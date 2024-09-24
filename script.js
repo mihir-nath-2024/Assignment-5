@@ -34,7 +34,7 @@ document.getElementById('btn-noakhali').addEventListener("click", function(event
         let comment = document.createElement('p');
         let paymentTime =document.createElement('p');
         let currentTime = new Date().toLocaleString('en-US', { timeZoneName: 'short' });
-        comment.textContent = `Payment of BDT ${noakhaliInputAmount.toFixed(2)} for Feni flood was successful.`;
+        comment.textContent = `Payment of BDT ${noakhaliInputAmount.toFixed(2)} for Noakhali flood was successful.`;
         paymentTime.textContent = `Date ${currentTime} (Bangladesh Standard Time.) `
         commentSection.appendChild(comment);
         commentSection.appendChild(paymentTime);

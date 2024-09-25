@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
     <title>History</title>
 </head>
 <body>
-    <h1>This is History Page.</h1>
+  <button id="button1" onclick="setActive(this)" class="bg-blue-500 text-white py-2 px-4 rounded">
+    Button 1
+  </button>
+  <button id="button2" onclick="setActive(this)" class="bg-blue-500 text-white py-2 px-4 rounded">
+    Button 2
+  </button>
+
+ <script> function setActive(clickedButton) {
+  // Get all buttons
+  var buttons = document.querySelectorAll('button');
+
+  // Remove active class from all buttons
+  buttons.forEach(function(button) {
+    button.classList.remove('bg-green-500', 'text-black');
+    button.classList.add('bg-blue-500', 'text-white');
+  });
+
+  // Add active class to the clicked button
+  clickedButton.classList.remove('bg-blue-500', 'text-white');
+  clickedButton.classList.add('bg-green-500', 'text-black');
+}
+
+</script>
+  
+
     
 </body>
 </html>

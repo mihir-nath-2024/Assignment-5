@@ -1,15 +1,44 @@
 // Donate and History Section
 
-document.getElementById('btn-donate').addEventListener("click", function(){
-    document.getElementById('comment-section').style.display="none";
-    document.getElementById('donate-section').style.display="block";
-})
+// document.getElementById('btn-donate').addEventListener("click", function(){
+//     document.getElementById('comment-section').style.display="none";
+//     document.getElementById('donate-section').style.display="block";
+   
+// })
 
-document.getElementById('btn-history').addEventListener("click", function(){
-    document.getElementById('comment-section').style.display="block";
-    document.getElementById('donate-section').style.display="none";
-})
+// document.getElementById('btn-history').addEventListener("click", function(){
+//     document.getElementById('comment-section').style.display="block";
+//     document.getElementById('donate-section').style.display="none";
+// })
 
+
+function setActive(clickedButton) {
+    // Get all buttons
+    var buttons = document.querySelectorAll('#btn-donate, #btn-history');
+  
+    // Remove active class from all buttons
+    buttons.forEach(function(button) {
+      button.classList.remove('bg-btn-secondary', 'text-white');
+      button.classList.add('bg-btn-primary');
+    });
+  
+    // Add active class to the clicked button
+    clickedButton.classList.remove('bg-btn-primary');
+    clickedButton.classList.add('bg-btn-secondary');
+  }
+  
+  document.getElementById('btn-donate').addEventListener("click", function() {
+    document.getElementById('comment-section').style.display = "none";
+    document.getElementById('donate-section').style.display = "block";
+    setActive(this);  // Set the Donate button as active
+  });
+  
+  document.getElementById('btn-history').addEventListener("click", function() {
+    document.getElementById('comment-section').style.display = "block";
+    document.getElementById('donate-section').style.display = "none";
+    setActive(this);  // Set the History button as active
+  });
+  
 
 
 
@@ -128,6 +157,8 @@ document.getElementById('btn-quota').addEventListener("click", function(event) {
         commentSection.appendChild(paymentTime);
         comment.style.fontSize='20px';
         comment.style.fontWeight='bold';
+
+        
         
        
 
@@ -143,4 +174,37 @@ document.getElementById('btn-quota').addEventListener("click", function(event) {
     }  
 });
 
+// // scroll Blur
+// const content = document.getElementById('main-part');
+// const navbarHeight = document.getElementById('top-two-btn').offsetHeight;
 
+// // Scroll event listener
+// window.onscroll = function() {
+    
+//     if (window.scrollY > navbarHeight) {
+//         content.style.filter = 'blur(5px)';
+//     } else {
+//         content.style.filter = 'none';
+//     }
+// };
+
+
+const navbarHeight = document.getElementById('top-two-btn').offsetHeight;
+
+        // Set the height of the blur overlay to match the navbar height
+        document.getElementById('blur-overlay').style.height = `${navbarHeight}px`;
+
+        // Add blur effect to the overlay
+        window.addEventListener('scroll', function() {
+            const blurOverlay = document.getElementById('blur-overlay');
+
+            if (window.scrollY > 0) {
+                blurOverlay.classList.add('backdrop-blur-md');  // Apply the blur
+            } else {
+                blurOverlay.classList.remove('backdrop-blur-md');  // Remove the blur when at the top
+            }
+        });
+
+
+
+// button

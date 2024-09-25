@@ -13,16 +13,16 @@
 
 
 function setActive(clickedButton) {
-    // Get all buttons
+   
     var buttons = document.querySelectorAll('#btn-donate, #btn-history');
   
-    // Remove active class from all buttons
+   
     buttons.forEach(function(button) {
       button.classList.remove('bg-btn-secondary', 'text-white');
       button.classList.add('bg-btn-primary');
     });
   
-    // Add active class to the clicked button
+    
     clickedButton.classList.remove('bg-btn-primary');
     clickedButton.classList.add('bg-btn-secondary');
   }
@@ -36,7 +36,7 @@ function setActive(clickedButton) {
   document.getElementById('btn-history').addEventListener("click", function() {
     document.getElementById('comment-section').style.display = "block";
     document.getElementById('donate-section').style.display = "none";
-    setActive(this);  // Set the History button as active
+    setActive(this);  
   });
   
 
